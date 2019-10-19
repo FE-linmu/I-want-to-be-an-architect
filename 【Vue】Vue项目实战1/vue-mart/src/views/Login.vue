@@ -1,16 +1,20 @@
 <template>
   <div>
     <div class="logo">
-      <img src="https://img.kaikeba.com/logo-new.png" alt>
+      <img src="https://img.kaikeba.com/logo-new.png"
+           alt>
     </div>
     <!-- <cube-button>登录</cube-button> -->
-    <cube-form :model="model" :schema="schema" @submit="handleLogin" @validate="haneldValidate"></cube-form>
+    <cube-form :model="model"
+               :schema="schema"
+               @submit="handleLogin"
+               @validate="haneldValidate"></cube-form>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       model: {
         username: "",
@@ -58,11 +62,11 @@ export default {
     };
   },
   methods: {
-    handleLogin(e) {
+    handleLogin (e) {
       // 组织表单默认提交行为
       e.preventDefault();
       // 登录请求
-    //   this.login(this.model) // 使用mapActions
+      //   this.login(this.model) // 使用mapActions
       this.$store
         .dispatch("login", this.model)
         .then(code => {
@@ -82,7 +86,7 @@ export default {
           toast.show();
         });
     },
-    haneldValidate(ret) {
+    haneldValidate (ret) {
       console.log(ret);
     }
   }

@@ -1,20 +1,26 @@
-    import History from './utils/history';
-    import router from './【Vue】Vue项目实战2/vue-mart/src/router';
+const express = require('express')
+const Vue = require('vue')
 
-    Vue.use(History);
+const app = express()
+const renderer = require('vue-server-renderer').createRenderer()
+const page = new Vue({
+  data: {
+    name: 'XXXXXX',
+    count: 1
+  },
+  template: `
+    <div>
+      <h1>{{name}}</h1>
+      <h1>{{count}}</h1>
+    </div>
+  `
+})
 
-    router.prototype.goBack=function(){
-      this.isBack=true;
-      this.back();
-    };
+app.get('/', async function (req, res) {
+  const html = await renderer.renderToString(page)
+  res.send(html)
+})
 
-    router.afterEach((to,from)=>{
-      if(router.isBack){
-        History.pop();
-        router.isBack=false;
-        router.transitionName='route-back';
-      }else{
-        History.push(to.path);
-        router.transitionName='route-forward';
-      }
-    })
+app.listen(3000, () => {
+  console.log('启动成功')
+})

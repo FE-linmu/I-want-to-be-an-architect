@@ -19,6 +19,7 @@ export default class Lifecycle extends Component {
   }
   shouldComponentUpdate() {
     // 组件是否需要更新，需要返回布尔值结果，优化点
+    // 可以拿到props、state，当props或者state没有更新时，return false做优化
     console.log("5.组件是否需要更新？");
     return true;
   }

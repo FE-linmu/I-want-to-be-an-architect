@@ -1,12 +1,14 @@
+// 引入cluster、os、process依赖包
 var cluster = require('cluster');
-var os = require('os'); // 获取CPU 的数量
+var os = require('os'); 
+// 获取CPU 的数量
 var numCPUs = os.cpus().length;
-var process = require('process')
+var process = require('process')   
 
-console.log('numCPUs:', numCPUs)
-var workers = {};
+console.log('numCPUs:', numCPUs)  
+var workers = {};   // 用来保存子进程
 if (cluster.isMaster) {
-    // 主进程分支
+    // 主进程分支，
     cluster.on('death', function (worker) {
         // 当一个工作进程结束时，重启工作进程 delete workers[worker.pid];
         worker = cluster.fork();

@@ -1,11 +1,6 @@
+
 ## React Naitve 学习
-
-<img src="./assets/logo.jpg" style="float:right;width:120px;margin-top:-48px;" />
-
-[TOC]
-
-## 1. 课前准备
-
+## 1. 准备工作
 1. 环境搭建
    [React Native中文网](https://reactnative.cn/)
 
@@ -18,24 +13,20 @@
 
    NodeJS React Es6,Es7
 
-## 2. 课程大纲
+## 2. 主要内容
 
 - 环境搭建
 - 项目启动与调试
 - React Native Flex布局与样式
 - 核心组件&&API
 
-## 课堂目标
+## 文章目标
 
 - 搭建RN开发环境，熟练使用chrome工具调试项目
 - 掌握React Native的核心组件和API
 - 掌握React Native布局方式
 
-
-
 ## React Native介绍
-
-![react-native-preview](./assets/react-native-preview.png)
 
 React Naitve的简介：Facebook在React.js Conf2015大会上推出的一个用于开发Android和iOS App的一个框架，主要编程语言是JavaScript。它的出现使用**即拥有Native的用户体验，又保留React的开发效率**。
 
@@ -60,11 +51,7 @@ React Native优缺点：
   3. 部分复杂的界面和操作，RN无法实现(可以考虑原生+React Native混合开发)；
   4. 版本更新较快，建议开发固定版本
 - React Native vs Flutter vs Weex
-
-![20180927194910311](assets/20180927194910311.png)
-
-
-
+![image.png](https://upload-images.jianshu.io/upload_images/15424855-afacd0b617997a05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ## 构建项目
@@ -80,9 +67,6 @@ React Native优缺点：
    
    npm view react-native versions //可以查看react-native所有的版本信息
    ```
-
-
-
 跳转到对应路径下执行相应的移动端项目：
 
 ```commonlisp
@@ -92,7 +76,7 @@ react-native run-ios or react-native run-android
 
 如果正常，运行效果如下：
 
-![效果图](https://reactnative.cn/docs/assets/GettingStartediOSSuccess.png)
+![效果图](https://upload-images.jianshu.io/upload_images/15424855-2eb43fbacb0bf5c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
@@ -188,13 +172,11 @@ Developer Menu是React Native给开发者定制的一个开发者菜单，来帮
 
 React Native程序运行时出现的Errors会被直接显示在屏幕上，以红色的背景显示，并会打印出错误信息。 你也可以通过` console.error()`来手动触发Errors。
 
-![139239-20180604134024115-599789745](./assets/139239-20180604134024115-599789745.png)
+![image.png](https://upload-images.jianshu.io/upload_images/15424855-e2d1e50a6b757aa3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ####Warnings
 
 React Native程序运行时出现的Warnings也会被直接显示在屏幕上，以黄色的背景显示，并会打印出警告信息。 你也可以通过` console.warn()`来手动触发Warnings。 你也可以通过`console.disableYellowBox = true`来手动禁用Warnings的显示，或者通过`console.ignoredYellowBox = ['Warning: ...'];`来忽略相应的Warning
-
-
 
 ### Chrome Developer Tools
 
@@ -202,19 +184,13 @@ React Native程序运行时出现的Warnings也会被直接显示在屏幕上，
 
 在Developer Menu下单击”Debug JS Remotely” 启动JS远程调试功能。此时Chrome会被打开，同时会创建一个“http://localhost:8081/debugger-ui.” Tab页。
 
-![139239-20180604134148202-1990435724](./assets/139239-20180604134148202-1990435724.png)
+![image.png](https://upload-images.jianshu.io/upload_images/15424855-4dea10fe6b1b21ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 第二步：打开Chrome开发者工具
 
 在该“http://localhost:8081/debugger-ui.”Tab页下打开开发者工具。打开Chrome菜单->选择更多工具->选择开发者工具。你也可以通过快捷键(Command⌘ + Option⌥ + I on Mac, Ctrl + Shift + I on Windows)打开开发者工具。
 
-
-
 - 断点调试
-
-
-
-
 
 # 当发生一些"莫名奇妙"的问题错误,常用解决方案
 
@@ -239,15 +215,7 @@ npm cache clean -f
 
 ```
 
-
-
-
-
-
-
 ## RN布局与样式
-
-
 
 一款好的App离不开漂亮的布局，RN中的布局方式采用的是FlexBox(弹性布局)
 
@@ -411,13 +379,6 @@ const styles = StyleSheet.create({
 });
 
 ```
-
-
-
-
-
-
-
 ## 组件的生命周期
 
 组件的生命周期一般分为这 **4** 个阶段：创建阶段、实例化阶段、运行（更新）阶段、销毁阶段。下面对各个阶段分别进行介绍。
@@ -612,7 +573,7 @@ class MyWeb extends Component {
 
 - **VirtualizedList**：[`FlatList`](https://reactnative.cn/docs/flatlist)和[`SectionList`](https://reactnative.cn/docs/sectionlist)的底层实现，VirtualizedList通过维护一个有限的渲染窗口(其中包含可见的元素)，并将渲染窗口之外的元素全部用合适的定长空白空间代替的方式，极大的改善了内存使用，提高了大量数据情况下的渲染性能。这个渲染窗口能响应滚动行为，元素离可视区越远优先级越低，越近优先级越高，当用户滑动速度过快时，会出现短暂空白的情况。
 
-![17_42_37__04_10_2019](assets/17_42_37__04_10_2019.jpg)
+![image.png](https://upload-images.jianshu.io/upload_images/15424855-77ddd4c24cac4b70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - **FlatList**：在RN0.43版本中引入了FlatList，SectionList与VirtualizedList，其中VirtualizedList是FlatList和SectionList的底层实现。
 
@@ -761,35 +722,10 @@ const styles = StyleSheet.create({
     borderColor: "#FFFFFF"
   }
 });
-
 ```
-
-
-
-## 课程回顾
+## 总结
 
 - 环境搭建
 - 项目启动与调试
 - React Native Flex布局与样式
 - 核心组件&&API
-
-
-
-## 作业 && 答疑
-
-- 环境搭建成功
-- 案例仿写(高性能组件)
-
-
-
-## 下节课内容
-
-- React-Navigation 3.x版本 介绍
-- 高性能组件使用，API使用
-- React-Navigation 核心API学习使用
-- APP导航框架设计
-- react-native-vector-icons 第三方图标库的介绍与使用
-
-
-
-<http://icon.wuruihong.com/>

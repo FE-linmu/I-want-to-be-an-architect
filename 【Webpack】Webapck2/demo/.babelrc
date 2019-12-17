@@ -1,0 +1,12 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage", //按需加载 实验性的功能
+        "corejs": 2
+      }
+    ],
+    "@babel/preset-react"
+  ]
+}

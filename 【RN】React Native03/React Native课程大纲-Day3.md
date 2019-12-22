@@ -1,39 +1,20 @@
-## React Naitve Day3
 
-<img src="./assets/logo.jpg" style="float:right;width:120px;margin-top:-48px;" />
+## 引言
+***
+此篇文章主要涉及以下内容：
 
-[TOC]
-
-## 课前回顾
-
-- 环境搭建
-- 项目启动与调试
-- React Native Flex布局与样式
-- 核心组件&&API
-- flatList
-
-
-
-## 课堂目标
-
-- 掌握react navigation3.x的安装流程
-- 了解react navigation 相关属性，和API
-- 掌握createStackNavigator普通导航使用
-- 熟练使用react-native-vector-icons图标库
-
-
+- react navigation3.x的安装流程
+- react navigation 相关属性，和API
+- createStackNavigator普通导航使用
+- 使用react-native-vector-icons图标库
 
 ## react navigation介绍
 
-![10_44_23__04_16_2019](/Users/kele/Desktop/react-native/assets/10_44_23__04_16_2019.jpg)
+![image.png](https://upload-images.jianshu.io/upload_images/15424855-d14a4bf4549ea9f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **源于React Native社区对基于Javascript的可扩展且使用简单的导航解决方案的需求**
 
 react-natvigation自开源以来。在短短不到3个月的时间，github上星数已达4000+。Fb推荐使用库，并且在React Native当前最新版本0.44中将Navigator删除。react-navigation据称有原生般的性能体验效果。可能会成为未来React Native导航组件的主流军
-
-
-
-
 
 ## 安装
 
@@ -470,14 +451,6 @@ function createStackNavigator(routeConfigMap, stackConfig = {}) {
 - gestureResponseDistance: 定义滑动返回的有效距离，水平状态下默认：25，垂直状态默认135；
 - gestureDirection: 设置关闭手势的方向。默认从左向右，可以设置从右到左的滑动操作。
 
-
-
-
-
-
-
-
-
 #### 创建一个StackNavigator类型的导航器
 
 ```react
@@ -899,7 +872,6 @@ RouteConfigs支持三个参数`screen`、`path`以及`navigationOptions`；
 - order: 定义tab顺序的routeNames数组。
 - paths: 提供routeName到path config的映射，它覆盖routeConfigs中设置的路径。
 - backBehavior: 后退按钮是否会导致标签切换到初始tab？ 如果是，则设切换到初始tab，否则什么也不做。 默认为切换到初始tab。
-- 
 
 #### tabBarOptions（tab配置）
 
@@ -1188,25 +1160,3 @@ export default createSwitchNavigator(
     }
 );
 ```
-
-
-
-
-
-
-
-
-
-
-
-## 课程回顾
-
-- React Navigation介绍
-- React Navigation概念与属性介绍
-- 核心导航器的学习与使用
-
-  
-
-
-
-修改主题，自定义底部导航。

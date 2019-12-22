@@ -562,14 +562,14 @@ class MyWeb extends Component {
 
 
 
-- **ListView**:高性能列表组件。经常使用ListView的同学都知道，这个组件的性能比较差，尤其是当有大量的数据需要展示的时候，ListView对内存的占用较多，常出现丢帧卡顿现象
+- **ListView**:列表组件。经常使用ListView的同学都知道，这个组件的性能比较差，尤其是当有大量的数据需要展示的时候，ListView对内存的占用较多，常出现丢帧卡顿现象
 
   ListView底层实现，渲染组件Item是全量渲染，而且没有复用机制，这就不可避免的当渲染较大数据量时，会发现以下情况：
 
   - 第一次打开与切换Tab时会出现卡顿或白屏的情况，比如ListView中有100个Item，只能等这100条Item都渲染完成，ListView中的内容才会展示
   - 滑动列表时会出现卡顿不跟手，listVIew渲染大量数据，需要占用较多的内存用于计算
 
-  **未来有很大可能性会被移除
+  **已被移除
 
 - **VirtualizedList**：[`FlatList`](https://reactnative.cn/docs/flatlist)和[`SectionList`](https://reactnative.cn/docs/sectionlist)的底层实现，VirtualizedList通过维护一个有限的渲染窗口(其中包含可见的元素)，并将渲染窗口之外的元素全部用合适的定长空白空间代替的方式，极大的改善了内存使用，提高了大量数据情况下的渲染性能。这个渲染窗口能响应滚动行为，元素离可视区越远优先级越低，越近优先级越高，当用户滑动速度过快时，会出现短暂空白的情况。
 
@@ -645,7 +645,7 @@ let {height, width} = Dimensions.get('window');
   const BigButton = require("./BigButton");
   ```
 
-  
+
   
 - **PixelRatio**
 

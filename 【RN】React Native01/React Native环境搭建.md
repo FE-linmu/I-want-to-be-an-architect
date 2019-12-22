@@ -1,9 +1,5 @@
-## React Naitve 
 
-<img src="./assets/logo.jpg" style="float:right;width:120px;margin-top:-48px;" />
-
-[TOC]
-
+# React Native
 ## 1.环境搭建
 
 ### Mac
@@ -54,12 +50,7 @@ yarn config set disturl https://npm.taobao.org/dist --global
 React Native 目前需要[Xcode](https://developer.apple.com/xcode/downloads/) 9.4 或更高版本。你可以通过 App Store 或是到[Apple 开发者官网](https://developer.apple.com/xcode/downloads/)上下载。这一步骤会同时安装 Xcode IDE、Xcode 的命令行工具和 iOS 模拟器。
 
 启动 Xcode，并在`Xcode | Preferences | Locations`菜单中检查一下是否装有某个版本的`Command Line Tools`。Xcode 的命令行工具中包含一些必须的工具，比如`git`等。
-
-![GettingStartedXcodeCommandLineTools](./assets/GettingStartedXcodeCommandLineTools.png)
-
-
-
------------------------------------------------------
+![image.png](https://upload-images.jianshu.io/upload_images/15424855-653683027c531fa5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **Android**：必须安装的依赖有：Node、Watchman 和 React Native 命令行工具以及 JDK 和 Android Studio，
 
@@ -96,8 +87,7 @@ Android SDK``Android SDK Platform``Performance (Intel ® HAXM)` ([AMD 处理器�
 Android Studio 默认会安装最新版本的 Android SDK。目前编译 React Native 应用需要的是`Android 9 (Pie)`版本的 SDK（注意 SDK 版本不等于终端系统版本，RN 目前支持 android4.1 以上设备）。你可以在 Android Studio 的 SDK Manager 中选择安装各版本的 SDK。
 
 你可以在 Android Studio 的欢迎界面中找到 SDK Manager。点击"Configure"，然后就能看到"SDK Manager"。
-
-![Android Studio Welcome](https://reactnative.cn/docs/assets/GettingStartedAndroidStudioWelcomeMacOS.png)
+![](https://upload-images.jianshu.io/upload_images/15424855-626f71ec13f85e96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 > SDK Manager 还可以在 Android Studio 的"Preferences"菜单中找到。具体路径是**Appearance & Behavior** → **System Settings** → **Android SDK**。
 
@@ -200,7 +190,7 @@ Android Studio 默认会安装最新版本的 Android SDK。目前编译 React N
 
 你可以在 Android Studio 的欢迎界面中找到 SDK Manager。点击"Configure"，然后就能看到"SDK Manager"。
 
-![Android Studio Welcome](https://reactnative.cn/docs/assets/GettingStartedAndroidStudioWelcomeWindows.png)
+![Android Studio Welcome](https://upload-images.jianshu.io/upload_images/15424855-052a0b9e73646dba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 > SDK Manager 还可以在 Android Studio 的"Preferences"菜单中找到。具体路径是**Appearance & Behavior** → **System Settings** → **Android SDK**。
 
@@ -219,7 +209,7 @@ React Native 需要通过环境变量来了解你的 Android SDK 装在什么路
 
 打开`控制面板` -> `系统和安全` -> `系统` -> `高级系统设置` -> `高级` -> `环境变量` -> `新建`，创建一个名为`ANDROID_HOME`的环境变量（系统或用户变量均可），指向你的 Android SDK 所在的目录（具体的路径可能和下图不一致，请自行确认）：
 
-![ANDROID_HOME Environment Variable](https://reactnative.cn/docs/assets/GettingStartedAndroidEnvironmentVariableANDROID_HOME.png)
+![ANDROID_HOME Environment Variable](https://upload-images.jianshu.io/upload_images/15424855-144e9b26eea0614b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 SDK 默认是安装在下面的目录：
 
@@ -293,10 +283,5 @@ emulator-5554 offline   # Google emulator
 现在你可以运行`react-native run-android`来在设备上安装并启动应用了。
 
 在输入此命令前，要先打开模拟器，或连接真机，第一次启动非常慢，需要下载gradle，也可以手动下载gradle安装。
-
-![14_26_28__04_09_2019](assets/14_26_28__04_09_2019.jpg)
-
-
-
-![14_36_24__04_09_2019](assets/14_36_24__04_09_2019.jpg)
-
+![](https://upload-images.jianshu.io/upload_images/15424855-3a857f6e1ed86642.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/15424855-8231e17630612312.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
